@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking — Разбор предиктов (Part 1, 2, 3) | ielts_in1month</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #14213d;
+  --muted: #64748b;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --blue-light: #eaf1ff;
+  --border: #e2e8f0;
+  --green: #15803d;
+  --green-bg: #e7f8ee;
+  --green-border: #86efac;
+  --red: #b91c1c;
+  --red-bg: #fdecec;
+  --red-border: #fca5a5;
+  --amber: #b45309;
+  --amber-bg: #fff7e6;
+  --amber-border: #fcd34d;
+  --gray-bg: #f8fafc;
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 6px 24px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== Header ===== */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand-block { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.brand-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--blue);
+  text-transform: lowercase;
+}
+.brand-title {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.2;
+}
+.header-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.meta-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid #c7ddff;
+}
+.tg-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.tg-link:hover { background: var(--blue-dark); text-decoration: none; }
+.tg-link svg { width: 14px; height: 14px; fill: currentColor; flex-shrink: 0; }
+
+/* ===== Layout ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 22px 60px;
+}
+
+/* ===== Intro ===== */
+.intro {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
+  border: 1.5px solid #bfdbfe;
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+}
+.intro h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--blue-dark);
+  letter-spacing: -0.01em;
+}
+.intro p {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.intro p:last-child { margin-bottom: 0; }
+
+/* ===== Part section ===== */
+.part-section {
+  margin-bottom: 36px;
+}
+.part-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.part-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+.part-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* ===== Content cards ===== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+.card-title {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--blue);
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.question-card { border-left: 4px solid var(--blue); }
+.question-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+.question-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.45;
+}
+.cue {
+  margin: 10px 0 0;
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* Bad / Good example */
+.example-card { position: relative; padding-left: 52px; }
+.example-label {
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+.example-bad {
+  border: 1.5px solid var(--red-border);
+  background: var(--red-bg);
+}
+.example-bad .example-label { background: var(--red); color: #fff; }
+.example-bad .card-title { color: var(--red); }
+.example-good {
+  border: 1.5px solid var(--green-border);
+  background: var(--green-bg);
+}
+.example-good .example-label { background: var(--green); color: #fff; }
+.example-good .card-title { color: var(--green); }
+
+.quote {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text);
+  font-style: italic;
+  margin: 0;
+}
+.quote-ru {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 8px 0 0;
+  font-style: normal;
+}
+
+/* Structure list */
+.structure-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+.structure-list li {
+  position: relative;
+  padding: 10px 0 10px 44px;
+  border-bottom: 1px dashed var(--border);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.structure-list li:last-child { border-bottom: none; }
+.structure-list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.structure-list li b { font-weight: 800; color: var(--text); }
+
+/* Constructions */
+.construct-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.construct-list li {
+  background: var(--gray-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.construct-list .phrase {
+  font-weight: 700;
+  color: var(--blue-dark);
+  font-style: italic;
+}
+.construct-list .note {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* Vocabulary */
+.vocab-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.vocab-list li {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 13px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.vocab-list .word {
+  font-weight: 800;
+  color: var(--blue-dark);
+  display: block;
+  margin-bottom: 2px;
+  font-size: 14.5px;
+}
+.vocab-list .trans { color: var(--muted); font-size: 13.5px; }
+
+/* Coach tip */
+.coach-tip {
+  background: linear-gradient(135deg, #fff7e6 0%, #ffedd5 100%);
+  border: 1.5px solid var(--amber-border);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.coach-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.coach-body h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--amber);
+  letter-spacing: -0.01em;
+}
+.coach-body p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Footer */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  padding: 26px 22px;
+  text-align: center;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.footer-text {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0;
+}
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.15s;
+}
+.footer-cta:hover { background: var(--blue-dark); text-decoration: none; }
+.footer-cta svg { width: 16px; height: 16px; fill: currentColor; }
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+  .container { padding: 24px 20px 50px; }
+  .brand-title { font-size: 17px; }
+  .part-title { font-size: 20px; }
+}
+
+/* ===== Phone ===== */
+@media (max-width: 640px) {
+  body { font-size: 15.5px; }
+  .header-inner { padding: 12px 16px; gap: 10px; }
+  .brand-title { font-size: 16px; }
+  .brand-name { font-size: 11.5px; }
+  .meta-badge { font-size: 10.5px; padding: 4px 9px; }
+  .tg-link { font-size: 12px; padding: 6px 11px; }
+  .tg-link span { display: none; }
+
+  .container { padding: 20px 14px 40px; }
+  .intro { padding: 18px 18px; margin-bottom: 26px; }
+  .intro h2 { font-size: 17.5px; }
+  .intro p { font-size: 14.5px; }
+
+  .part-head { gap: 10px; margin-bottom: 14px; }
+  .part-badge { font-size: 12px; padding: 5px 12px; }
+  .part-title { font-size: 18.5px; }
+
+  .card { padding: 16px 18px; margin-bottom: 12px; }
+  .card-title { font-size: 12px; margin-bottom: 10px; }
+
+  .example-card { padding-left: 48px; }
+  .example-label { left: 14px; top: 16px; width: 24px; height: 24px; font-size: 14px; }
+
+  .question-text { font-size: 16px; }
+  .quote { font-size: 14.5px; }
+  .quote-ru { font-size: 13px; }
+
+  .structure-list li { padding: 9px 0 9px 40px; font-size: 14px; }
+  .structure-list li::before { width: 26px; height: 26px; font-size: 12.5px; }
+
+  .construct-list li { font-size: 14px; padding: 10px 12px; }
+  .construct-list .phrase { display: block; margin-bottom: 3px; }
+
+  .vocab-list { grid-template-columns: 1fr; gap: 8px; }
+  .vocab-list li { padding: 9px 12px; }
+  .vocab-list .word { font-size: 14px; }
+  .vocab-list .trans { font-size: 13px; }
+
+  .coach-tip { padding: 18px 18px; flex-direction: column; gap: 12px; }
+  .coach-icon { width: 36px; height: 36px; font-size: 18px; }
+  .coach-body h3 { font-size: 16px; }
+  .coach-body p { font-size: 14px; }
+
+  .site-footer { padding: 22px 16px; }
+  .footer-cta { font-size: 13.5px; padding: 10px 20px; }
+}
+
+@media (max-width: 380px) {
+  .header-right { width: 100%; justify-content: flex-start; }
+  .part-title { font-size: 17px; }
+  .card { padding: 14px 15px; }
+  .example-card { padding-left: 44px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-block">
+      <div class="brand-name">ielts_in1month</div>
+      <h1 class="brand-title">IELTS Speaking · Разбор предиктов</h1>
+    </div>
+    <div class="header-right">
+      <span class="meta-badge">PART 1 · 2 · 3</span>
+      <a class="tg-link" href="https://t.me/ielts_in1month" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M9.04 15.47l-.38 5.38c.54 0 .78-.23 1.06-.51l2.55-2.44 5.29 3.87c.97.54 1.66.26 1.93-.89L22.88 4.1c.31-1.43-.52-1.99-1.46-1.64L1.98 9.96c-1.37.53-1.35 1.29-.23 1.64l4.97 1.55L18.4 6.3c.55-.36 1.05-.16.64.2l-9.99 9z"/></svg>
+        <span>@ielts_in1month</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Intro -->
+  <section class="intro">
+    <h2>Привет, будущие 7.0+!</h2>
+    <p>Сегодня разберем, как отвечать на вопросы из свежих предиктов так, чтобы экзаменатор поставил высокий балл за <b>Lexical Resource</b> и <b>Fluency</b>.</p>
+    <p>Берем по одному вопросу с каждого блока и упаковываем их в правильные конструкции.</p>
+  </section>
+
+  <!-- PART 1 -->
+  <section class="part-section">
+    <div class="part-head">
+      <span class="part-badge">PART 1</span>
+      <h2 class="part-title">Daily Routine</h2>
+    </div>
+
+    <div class="card question-card">
+      <div class="question-label">Вопрос</div>
+      <p class="question-text">What is your daily routine like?</p>
+    </div>
+
+    <div class="card example-card example-bad">
+      <span class="example-label">✗</span>
+      <div class="card-title">Плохо</div>
+      <p class="quote">I wake up, eat, go to work, come home.</p>
+      <p class="quote-ru">Скучно, мало слов.</p>
+    </div>
+
+    <div class="card example-card example-good">
+      <span class="example-label">✓</span>
+      <div class="card-title">Хорошо (Band 7+)</div>
+      <p class="quote">"Well, my routine is pretty standard on weekdays. I usually wake up around 7 AM, have a quick breakfast, and then head off to work. In the evening, I try to wind down by going for a walk or reading a book. On weekends, though, I like to sleep in and take things easy."</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🗣 Конструкции для Part 1</div>
+      <ul class="construct-list">
+        <li><span class="phrase">Well, my routine is pretty standard…</span><span class="note">Задает непринужденный тон</span></li>
+        <li><span class="phrase">I usually… and then…</span><span class="note">Базовая связка действий</span></li>
+        <li><span class="phrase">On weekends, though…</span><span class="note">Контраст — экзаменаторы это любят</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📚 Вокабуляр</div>
+      <ul class="vocab-list">
+        <li><span class="word">Head off</span><span class="trans">направляться куда-либо</span></li>
+        <li><span class="word">Wind down</span><span class="trans">расслабляться после рабочего дня</span></li>
+        <li><span class="word">Sleep in</span><span class="trans">выспаться, встать позже обычного</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PART 2 -->
+  <section class="part-section">
+    <div class="part-head">
+      <span class="part-badge">PART 2</span>
+      <h2 class="part-title">Describe a party or celebration you enjoyed</h2>
+    </div>
+
+    <div class="card question-card">
+      <div class="question-label">Cue Card</div>
+      <p class="question-text">Describe a party or celebration you enjoyed</p>
+      <p class="cue">What the occasion was · Who was there · What you did · Why you enjoyed it.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💡 Как строить монолог (на 2 минуты)</div>
+      <ul class="structure-list">
+        <li><b>Intro (10 сек):</b> Назови событие и дай ему оценку.</li>
+        <li><b>Details (40 сек):</b> Место, люди, атмосфера.</li>
+        <li><b>Actions (40 сек):</b> Что конкретно делали.</li>
+        <li><b>Why (30 сек):</b> Эмоции и вывод.</li>
+      </ul>
+    </div>
+
+    <div class="card example-card example-good">
+      <span class="example-label">✓</span>
+      <div class="card-title">Пример ответа (Band 7+)</div>
+      <p class="quote">"I’d like to talk about a milestone celebration I attended recently. It was my best friend’s 25th birthday party. It took place at a cozy rooftop restaurant. There were about 20 guests, mostly our close-knit group of friends. We had a sit-down dinner, and later we spent the whole evening catching up, laughing, and sharing anecdotes. The reason I thoroughly enjoyed it was the atmosphere. Everyone was in high spirits, and it felt great to let our hair down after a stressful month at work."</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🗣 Конструкции для Part 2</div>
+      <ul class="construct-list">
+        <li><span class="phrase">I’d like to talk about…</span><span class="note">Четкий старт</span></li>
+        <li><span class="phrase">The reason I thoroughly enjoyed it was…</span><span class="note">Прямой ответ на последний пункт карточки</span></li>
+        <li><span class="phrase">It felt great to…</span><span class="note">Передача эмоций</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📚 Вокабуляр</div>
+      <ul class="vocab-list">
+        <li><span class="word">Milestone</span><span class="trans">важное событие</span></li>
+        <li><span class="word">Close-knit</span><span class="trans">сплоченный (о коллективе / семье)</span></li>
+        <li><span class="word">Catch up</span><span class="trans">наверстать упущенное, пообщаться</span></li>
+        <li><span class="word">Let one's hair down</span><span class="trans">расслабиться, отдохнуть (идиома)</span></li>
+        <li><span class="word">Sit-down dinner</span><span class="trans">ужин за столом (не фуршет)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PART 3 -->
+  <section class="part-section">
+    <div class="part-head">
+      <span class="part-badge">PART 3</span>
+      <h2 class="part-title">Time Management</h2>
+    </div>
+
+    <div class="card question-card">
+      <div class="question-label">Вопрос</div>
+      <p class="question-text">Do you think people are busier today than in the past?</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💡 Структура ответа (O.R.E.O)</div>
+      <p style="margin:0; font-size:14.5px; line-height:1.6;">
+        <b>Мнение</b> (Opinion) → <b>Причина</b> (Reason) → <b>Пример</b> (Example) → <b>Вывод</b> (Opinion).
+      </p>
+    </div>
+
+    <div class="card example-card example-good">
+      <span class="example-label">✓</span>
+      <div class="card-title">Пример ответа (Band 7+)</div>
+      <p class="quote">"Without a doubt, yes. I think we are much busier today. We live in a fast-paced world. People are constantly juggling multiple responsibilities, like work, family, and side projects. Technology was supposed to make our lives easier, but it actually keeps us connected 24/7, which means we never truly switch off. So, while we may have more conveniences, we definitely have less free time than our grandparents did."</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🗣 Конструкции для Part 3 (Абстрактные вопросы)</div>
+      <ul class="construct-list">
+        <li><span class="phrase">Without a doubt, yes.</span><span class="note">Уверенное начало</span></li>
+        <li><span class="phrase">Technology was supposed to… but it actually…</span><span class="note">Отличная грамматическая конструкция для контраста</span></li>
+        <li><span class="phrase">So, while we may have… we definitely have…</span><span class="note">Сильное заключение</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📚 Вокабуляр</div>
+      <ul class="vocab-list">
+        <li><span class="word">Fast-paced</span><span class="trans">стремительный (о ритме жизни)</span></li>
+        <li><span class="word">To juggle</span><span class="trans">совмещать (несколько дел)</span></li>
+        <li><span class="word">Connected 24/7</span><span class="trans">на связи 24/7</span></li>
+        <li><span class="word">Switch off</span><span class="trans">отключиться от дел</span></li>
+        <li><span class="word">Conveniences</span><span class="trans">удобства</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Coach tip -->
+  <section class="coach-tip">
+    <div class="coach-icon">🔥</div>
+    <div class="coach-body">
+      <h3>Совет тренера</h3>
+      <p>Не пытайтесь выучить эти ответы наизусть. Выучите конструкции (выделены <b>полужирным курсивом</b>) и вокабуляр. Экзаменатор сразу слышит заученный текст, а вот умение жонглировать сложными фразами в спонтанной речи — это и есть Band 7+.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-text">Больше IELTS-материалов и разборов — в Telegram-канале</p>
+    <a class="footer-cta" href="https://t.me/ielts_in1month" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M9.04 15.47l-.38 5.38c.54 0 .78-.23 1.06-.51l2.55-2.44 5.29 3.87c.97.54 1.66.26 1.93-.89L22.88 4.1c.31-1.43-.52-1.99-1.46-1.64L1.98 9.96c-1.37.53-1.35 1.29-.23 1.64l4.97 1.55L18.4 6.3c.55-.36 1.05-.16.64.2l-9.99 9z"/></svg>
+      @ielts_in1month
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
